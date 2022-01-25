@@ -88,6 +88,21 @@ In the development pipeline, we separate market environments from the data layer
 
 A demonstration notebook for plug-and-play with ElegantRL, Stable Baselines3 and RLlib: [Plug and Play with DRL Agents](https://colab.research.google.com/github/AI4Finance-Foundation/FinRL-Meta/blob/main/Demo_Plug_and_Play_with_DRL_Libraries.ipynb)
 
+## installation
+
+```
+apt update
+apt install swig cmake
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar xzf ta-lib-0.4.0-src.tar.gz
+cd ta-lib
+./configure
+make install
+pip3 install pytest_runner tushare TA-Lib
+pip install -r ./requirements.txt
+pip3 install git+https://github.com/AI4Finance-Foundation/FinRL.git
+```
+
 ## "Training-Testing-Trading" Pipeline
 
 A DRL agent learns by interacting with the training environment, is validated in the validation environment for parameter tuning. Then, the agent is tested in historical datasets (backtesting).  Finally, the agent will be deployed in paper trading or live trading markets. 
@@ -130,17 +145,3 @@ For future work, we plan to build a multi-agent-based market simulator that cons
 <img align="center" src=figs/Northwestern_University.png width="120"> &nbsp;&nbsp;
 <img align="center" src=figs/NYU_Shanghai_Logo.png width="200">	&nbsp;&nbsp;
 </div>
-
-## installation
-
-```
-apt update
-apt install swig cmake
-wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-tar xzf ta-lib-0.4.0-src.tar.gz
-cd ta-lib
-./configure
-make install
-pip3 install pytest_runner tushare TA-Lib
-pip3 install git+https://github.com/AI4Finance-Foundation/FinRL.git
-```
