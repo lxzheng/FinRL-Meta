@@ -130,3 +130,17 @@ For future work, we plan to build a multi-agent-based market simulator that cons
 <img align="center" src=figs/Northwestern_University.png width="120"> &nbsp;&nbsp;
 <img align="center" src=figs/NYU_Shanghai_Logo.png width="200">	&nbsp;&nbsp;
 </div>
+
+## installation
+
+```
+apt update
+apt install swig cmake
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar xzf ta-lib-0.4.0-src.tar.gz
+cd ta-lib
+./configure
+make install
+pip3 install pytest_runner tushare TA-Lib
+pip3 install git+https://github.com/AI4Finance-Foundation/FinRL.git
+```
